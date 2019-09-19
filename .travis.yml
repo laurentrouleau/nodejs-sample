@@ -1,6 +1,10 @@
 language: node_js
 node_js:
-  - "node"
+  - "stable"
 env:
   - MY_VAR=EverythingIsAwesome
   - NODE_ENV=TEST
+jobs:
+  include:
+    - stage: test integration
+      script: npm run dev && npm run test
