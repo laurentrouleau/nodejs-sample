@@ -5,5 +5,7 @@ jobs:
   include:
     - stage: test
       script: npm install
+    - stage: deploy
+      script: npm run dev
     - stage: test integration
-      script: npm run dev && npm run test
+      script: npm run test
